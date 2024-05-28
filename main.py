@@ -7,3 +7,10 @@ import os
 import streamlit as st
 
 os.environ["AWS_PROFILE"] = "cobot"
+
+#bedrock client
+
+bedrock_client = boto3.client(
+    service_name="bedrock-runtime",
+    region_name="us-west-2"
+)
