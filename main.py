@@ -35,3 +35,15 @@ def my_chatbot(language,freeform_text):
     return response
 
 # print(my_chatbot("english","which country is most advanced in technology?"))
+
+st.title("💬 Co-Bot")
+
+language = st.sidebar.selectbox("Language", ["english", "spanish"])
+
+if language:
+    freeform_text = st.sidebar.text_area(label="what is your question?",
+    max_chars=100)
+
+if freeform_text:
+    response = my_chatbot(language,freeform_text)
+    st.write(response['text'])
