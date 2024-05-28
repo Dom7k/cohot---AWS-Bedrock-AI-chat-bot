@@ -5,3 +5,5 @@ from langchain.prompts import PromptTemplate
 import boto3
 import os
 import streamlit as st
+
+os.environ["AWS_PROFILE"] = "cobot"
